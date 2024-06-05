@@ -4,7 +4,7 @@ In this recipe, we'll be creating an "analytics" [Virtual Instance](https://docs
 
 Link to recipe on Rockset website: https://docs.rockset.com/documentation/recipes/auto-scale-vi-on-custom-schedule
 
-**Requirements:**
+## Requirements
 
 - Python >= 3.6
 - `pip install rockset time json`
