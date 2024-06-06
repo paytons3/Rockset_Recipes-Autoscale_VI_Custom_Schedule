@@ -2,7 +2,7 @@
 
 In this recipe, we'll be creating an "analytics" [Virtual Instance](https://docs.rockset.com/documentation/docs/virtual-instances) that will auto-scale up during peak workload hours and then auto-scale down after peak hours. We will implement this using [Scheduled Query Lambdas](https://docs.rockset.com/documentation/docs/query-lambdas#scheduled-query-lambdas).
 
-You can copy the full Pythons script without step-by-step descriptions via the attached python-script file.
+You can copy the full Pythons script without step-by-step descriptions via the attached `python-script` file.
 
 Link to recipe on Rockset website: https://docs.rockset.com/documentation/recipes/auto-scale-vi-on-custom-schedule
 
