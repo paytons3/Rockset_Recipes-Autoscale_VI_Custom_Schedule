@@ -1,4 +1,4 @@
-# Rockset Recipe: Auto-Scale Virtual Instance on a Custom Schedule
+# Rockset Recipe: Auto-Scale a Virtual Instance on a Custom Schedule
 
 In this recipe, we'll be creating an "analytics" [Virtual Instance](https://docs.rockset.com/documentation/docs/virtual-instances) that will auto-scale up during peak workload hours and then auto-scale down after peak hours. We will implement this using [Scheduled Query Lambdas](https://docs.rockset.com/documentation/docs/query-lambdas#scheduled-query-lambdas).
 
@@ -137,7 +137,10 @@ def create_query_lambda(rs, workspaceName, queryLambdaName, description):
 ```
 
 ```
+# Create Scale-Up VI Query Lambda
 create_query_lambda(rs, workspaceName, scaleUpVIqueryLambdaName, scaleUpDescription)
+
+# Create Scale-Down VI Query Lambda
 create_query_lambda(rs, workspaceName, scaleDownVIqueryLambdaName, scaleDownDescription)
 ```
 
@@ -168,7 +171,10 @@ def created_scheduled_ql(rs, workspaceName, queryLambdaName, cronSchedule, webho
 ```
 
 ```
+# Create Scale-Up VI Scheduled Query Lambda
 created_scheduled_ql(rs, workspaceName, scaleUpVIqueryLambdaName, cronScheduleScaleUp, scaleVIurl, webhookAuthorization, scaleUpVIPayload)
+
+# Create Scale-Down VI Scheduled Query Lambda
 created_scheduled_ql(rs, workspaceName, scaleDownVIqueryLambdaName, cronScheduleScaleDown, scaleVIurl, webhookAuthorization, scaleDownVIPayload)
 ```
 
